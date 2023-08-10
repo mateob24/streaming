@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const btnMovie = document.querySelectorAll(".btn-movie");
+  const btn = document.querySelectorAll(".btn");
   const iframes = document.querySelectorAll(".trailer");
 
-  const imgMovie = document.querySelectorAll(".img-movie");
+  const img = document.querySelectorAll(".img");
 //   const divTrailer = document.querySelector(".trailer");
-    btnMovie.forEach((btn, index) => {
+    btn.forEach((btn, index) => {
         btn.addEventListener('click', () => {
 
         if (iframes[index].style.display == "none") {
-            imgMovie[index].style.display = "none"
+            img[index].style.display = "none"
             iframes[index].style.display = "flex"
         }else {
             iframes[index].style.display = "none";
-            imgMovie[index].style.display = "block"
+            img[index].style.display = "block"
         }
         
         });
