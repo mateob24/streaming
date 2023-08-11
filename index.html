@@ -13,10 +13,16 @@
         <h1>Streaming SMC</h1>
         <nav>
             <ul id="menu">
-                <li><a href="">Películas</a></li>
-                <li><a href="">Series</a></li>
+                <li><a id="movies" href="">Películas</a></li>
+                <li><a id="series" href="">Series</a></li>
             </ul>
         </nav>
+        <select id="categoria-select">
+            <option value="todas">Todas</option>
+            <option value="accion">Acción</option>
+            <option value="terror">Terror</option>
+          </select>
+        <input type="text" id="searchInput" placeholder="Buscar por título">
     </header>
     <section class="movie-serie">
         <div id="videoModal" class="modal">
@@ -29,7 +35,7 @@
             <h2>PELÍCULAS</h2>
         </div>
         <section class="movie-container">
-            <div class="movie-card">
+            <div class="movie-card" data-category="accion">
                 <img src="img/Jhon Wick 1.jpg" class="img" alt="Jhon Wick 1" />
                 <div class="dates">
                     <h2 class="titulo">John Wick 1</h2>
@@ -44,7 +50,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="accion">
                 <img src="img/Jhon Wick 2.jpg" class="img" alt="Jhon Wick 2" />
                 <div class="dates">
                     <h2 class="titulo">John Wick 2</h2>
@@ -59,7 +65,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="accion">
                 <img src="img/Jhon Wick 3.jpg" class="img" alt="Jhon Wick 3" />
                 <div class="dates">
                     <h2 class="titulo">John Wick 3</h2>
@@ -73,7 +79,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="accion">
                 <img src="img/Jhon Wick 4.jpg" class="img" alt="Jhon Wick 4" />
                 <div class="dates">
                     <h2 class="titulo">John Wick 4</h2>
@@ -88,7 +94,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="accion">
                 <img src="img/lucy.jpg" class="img" alt="Lucy" />
                 <div class="dates">
                     <h2 class="titulo">Lucy</h2>
@@ -102,7 +108,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="accion">
                 <img src="img/limitless.jpg" class="img" alt="Sin Limites" />
                 <div class="dates">
                     <h2 class="titulo">Sin Limites</h2>
@@ -117,7 +123,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloween.jpg" class="img" alt="Halloween" />
                 <div class="dates">
                     <h2 class="titulo">Halloween</h2>
@@ -130,7 +136,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloween2.jpg" class="img" alt="Halloween 2" />
                 <div class="dates">
                     <h2 class="titulo">Halloween 2</h2>
@@ -143,7 +149,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloween3.jpg" class="img" alt="Halloween 3" />
                 <div class="dates">
                     <h2 class="titulo">Halloween 3</h2>
@@ -157,7 +163,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloween4.jpg" class="img" alt="Halloween 4" />
                 <div class="dates">
                     <h2 class="titulo">Halloween 4</h2>
@@ -170,7 +176,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloween5.jpg" class="img" alt="Halloween 5" />
                 <div class="dates">
                     <h2 class="titulo">Halloween 5</h2>
@@ -185,7 +191,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloween6.jpg" class="img" alt="Halloween 6" />
                 <div class="dates">
                     <h2 class="titulo">Halloween 6</h2>
@@ -200,7 +206,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloween7.jpg" class="img" alt="Halloween 7" />
                 <div class="dates">
                     <h2 class="titulo">Halloween 7</h2>
@@ -215,7 +221,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloween8.jpg" class="img" alt="Halloween 8" />
                 <div class="dates">
                     <h2 class="titulo">Halloween 8</h2>
@@ -230,7 +236,7 @@
                 <button type="button" class="btn">Ver trailer</button>
             </div>
 
-            <div class="movie-card">
+            <div class="movie-card" data-category="terror">
                 <img src="img/halloweenElFinal.jpg" class="img" alt="Halloween elfinal" />
                 <div class="dates">
                     <h2 class="titulo">Halloween El Final</h2>
