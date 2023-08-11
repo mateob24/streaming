@@ -1,15 +1,25 @@
 import { urlMovies } from "./url.js";
+import { urlSeries } from "./url.js";
 
 const trailer = document.getElementById('trailer')
 const modal = document.getElementById('videoModal');
 const closeModal = modal.querySelector('.close')
-const openModalBtn = document.querySelectorAll('.btn')
+const openModalBtn = document.querySelectorAll('.btn1')
+const openModalBtn2 = document.querySelectorAll('.btn2')
 
 openModalBtn.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         trailer.src = urlMovies[index].trailerUrl
         modal.style.display = 'block';
     });
+
+})
+
+openModalBtn2.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+      trailer.src = urlSeries[index].trailerUrl
+      modal.style.display = 'block';
+  });
 
 })
 

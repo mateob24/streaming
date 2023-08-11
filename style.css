@@ -106,6 +106,7 @@ header nav{
 .modal-content {
     width: 700px;
     max-width: 800px;
+    top: 160px;
     margin: auto;
     position: relative;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
@@ -157,7 +158,8 @@ header nav{
     align-items: center;
 }
 
-.btn{
+.btn1,
+.btn2{
     padding: 10px 30px;
     border-radius: 4px;
     background-color: orange;

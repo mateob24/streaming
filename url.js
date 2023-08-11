@@ -2,7 +2,7 @@
 export const urlMovies = [
     {
         "titulo": "John Wick 1",
-        "trailerUrl": "./videos/johnWick1.mp4"
+        "trailerUrl": "https://www.youtube.com/embed/Ulm62x1F8iM"
     },
     {
         "titulo": "John Wick 2",
@@ -58,6 +58,69 @@ export const urlMovies = [
     },
     {
         "titulo": "Halloween El Final", 
-        "trailerUrl": "https://www.youtube.com/watch?v=F90MmnTnSUQ&ab_channel=UniversalSpain"
+        "trailerUrl": "./videos/halloweenElFinal.mp4"
+    }
+]
+
+export const urlSeries = [
+    {
+        "titulo": "Invasión Screta",
+        "trailerUrl": "./videos/invasionSecreta.mp4"
+    },
+    {
+        "titulo": "La Lista Terminal",
+        "trailerUrl": "./videos/laListaTerminal.mp4"
+    },
+    {
+        "titulo": "Frontier",
+        "trailerUrl": "./videos/frontier.mp4"
+    },
+    {
+        "titulo": "Santo",
+        "trailerUrl": "./videos/santo.mp4"
+    },
+    {
+        "titulo": "Leverage",
+        "trailerUrl": "./videos/reglasDelJuego.mp4"
+    },
+    {
+        "titulo": "Banshee",
+        "trailerUrl": "./videos/Banshee.mp4"
+    },
+    {
+        "titulo": "Blindspot",
+        "trailerUrl": "./videos/Blindspot.mp4"
+    },
+    {
+        "titulo": "Band of Brothers",
+        "trailerUrl": "./videos/BandofBrothers.mp4"
+    },
+    {
+        "titulo": "Marco Polo",
+        "trailerUrl": "./videos/marcoPolo.mp4"
+    },
+    {
+        "titulo": "El Caballero Negro",
+        "trailerUrl": "./videos/elCaballeroNegro.mp4"
+    },
+    {
+        "titulo": "Espía/Maestro",
+        "trailerUrl": "./videos/espiaMaestro.mp4"
+    },
+    {
+        "titulo": "Bienvenidos a Edén",
+        "trailerUrl": "./videos/eden.mp4"
+    },
+    {
+        "titulo": "Sweet Tooth",
+        "trailerUrl": "./videos/sweet.mp4"
+    },
+    {
+        "titulo": "Jack Ryan",
+        "trailerUrl": "./videos/ryan.mp4"
+    },
+    {
+        "titulo": "Moon Knight", 
+        "trailerUrl": "./videos/moon.mp4"
     }
 ]
