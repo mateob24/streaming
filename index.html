@@ -16,13 +16,16 @@
                 <li><a id="movies" href="">Películas</a></li>
                 <li><a id="series" href="">Series</a></li>
             </ul>
+            <select id="categoria-select">
+                <option value="todas">Todas</option>
+                <option value="accion">Acción</option>
+                <option value="terror">Terror</option>
+                <option value="drama">Drama</option>
+                <option value="belico">Bélico</option>
+                <option value="ciencia ficcion">Ciencia Ficción</option>
+              </select>
+            <input type="text" id="searchInput" placeholder="Buscar por título">
         </nav>
-        <select id="categoria-select">
-            <option value="todas">Todas</option>
-            <option value="accion">Acción</option>
-            <option value="terror">Terror</option>
-          </select>
-        <input type="text" id="searchInput" placeholder="Buscar por título">
     </header>
     <section class="movie-serie">
         <div id="videoModal" class="modal">
@@ -31,10 +34,11 @@
                 <iframe id="trailer" frameborder="0" allowfullscreen muted></iframe>
             </div>
         </div>
-        <div class="title-container">
-            <h2>PELÍCULAS</h2>
-        </div>
+
         <section class="movie-container">
+            <div class="title-movies">
+                <h2>PELÍCULAS</h2>
+            </div>
             <div class="movie-card" data-category="accion">
                 <img src="img/Jhon Wick 1.jpg" class="img" alt="Jhon Wick 1" />
                 <div class="dates">
@@ -254,12 +258,10 @@
 
         <!-- ///////////////////////////////////// SERIES ///////////////////////////////////////// -->
 
-        <div class="title-container">
-            <h2>SERIES</h2>
-        </div>
-
         <section class="serie-container">
-    
+            <div class="title-series">
+                <h2>SERIES</h2>
+            </div>    
             <div class="serie-card" data-category="accion">
                 <img src="img/invasionSecreta.jpg" class="img" alt="Invasión secreta">
                 <div class="dates">
@@ -386,7 +388,7 @@
     
             </div>
     
-            <div class="serie-card" data-category="">
+            <div class="serie-card" data-category="ciencia ficcion">
                 <img src="img/elCaballeroNegro.jpg" class="img" alt="El caballero negro">
                 <div class="dates">
                     <h2 class="titulo">El caballero Negro</h2>
@@ -400,7 +402,7 @@
     
             </div>
     
-            <div class="serie-card" data-category="">
+            <div class="serie-card" data-category="drama">
                 <img src="img/espiaMaestro.jpg" class="img" alt="Espía/Maestro">
                 <div class="dates">
                     <h2 class="titulo">Espía/Maestro</h2>
@@ -415,7 +417,7 @@
     
             </div>
     
-            <div class="serie-card" data-category="">
+            <div class="serie-card" data-category="drama">
                 <img src="img/eden.jpg" class="img" alt="Bienvenidos a Edén">
                 <div class="dates">
                     <h2 class="titulo">Bienvenidos a Edén</h2>
@@ -428,7 +430,7 @@
     
             </div>
     
-            <div class="serie-card" data-category="">
+            <div class="serie-card" data-category="drama">
                 <img src="img/sweet.jpg" class="img" alt="Sweet Tooth">
                 <div class="dates">
                     <h2 class="titulo">Sweet Tooth</h2>
@@ -441,7 +443,7 @@
     
             </div>
     
-            <div class="serie-card" data-category="">
+            <div class="serie-card" data-category="accion">
                 <img src="img/ryan.jpg" class="img" alt="Jack Ryan">
                 <div class="dates">
                     <h2 class="titulo">Jack Ryan</h2>
@@ -454,7 +456,7 @@
     
             </div>
     
-            <div class="serie-card" data-category="">
+            <div class="serie-card" data-category="ciencia ficcion">
                 <img src="img/moon.jpg" class="img" alt="Moon Knight">
                 <div class="dates">
                     <h2 class="titulo">Moon Knight</h2>

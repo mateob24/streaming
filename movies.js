@@ -82,8 +82,14 @@ function filtrarPorCategoria(categoria) {
     });
   }
 
+  const titleMovies = document.querySelector('.title-movies')
+  const titleSeries = document.querySelector('.title-series')
   document.getElementById('categoria-select').addEventListener('change', function() {
     const seleccionada = this.value;
     filtrarPorCategoria(seleccionada);
+    if (titleSeries.style.display=="flex") {
+      
+    }
+    titleSeries.style.display="none"
   });
   
