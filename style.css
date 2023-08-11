@@ -231,7 +231,7 @@ footer{
     }
     
     .dates{
-        height: 200px;
+        height: 220px;
         gap: 6px;
     }
     
@@ -241,7 +241,7 @@ footer{
     }
     
     .info {
-        height: 160px;
+        height: 150px;
         padding: 0 16px;
         line-height: 16px;
         font-size: 12px;
