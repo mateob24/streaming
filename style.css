@@ -3,35 +3,60 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-family: sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 header {
     width: 100%;
     height: 83px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
 }
 
-header h1 {
-    font-size: 36px;
-    color: orange;
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.logo i{
+    margin-top: 5px;
+    font-size: 42px;
+    color: rgba(255, 166, 0, 0.6);
+    -webkit-text-stroke: 1px orange;
+    text-shadow: 0px 0px 3px;
+}
+
+.logo h1 {
+    font-size: 46px;
+    font-weight: 900;
+    color: rgba(255, 166, 0, 0.6);
+    -webkit-text-stroke: 1px orange;
+    text-shadow: 0px 0px 3px;   
 }
 
 
 header nav{
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    /* gap: 100px; */
 }
 
 #menu{
+    width: 40%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: center;    
+    gap: 40px;
 }
 
 #menu li{
@@ -42,60 +67,79 @@ header nav{
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
-    color: orangered;
+    color: rgba(245, 245, 245, 0.6);
+    -webkit-text-stroke: 1px whitesmoke;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px;
 }
 
+.location{
+    color: rgba(255, 166, 0, 0.8);
+}
+
+#menu li a:hover{
+    color: rgba(255, 166, 0, 0.8);
+    -webkit-text-stroke: 1px orange;
+    text-shadow: 0px 0px 1px;
+    transition: 1s;
+}
+
+#search-input{
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 2px;
+    outline: none; 
+    color: black;
+}
+
+#search-input::placeholder{
+    font-size: 14px;
+}
+
+/* #search-input:focus{
+    border-color: orange;  
+    FOCUS PARA MODIFICAR EL BUSCADOR MIENTRAS SE LE HAGA CLICK 
+} 
+*/
+    
+#categoria-select{
+    width: 150px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    text-align: center;
+    appearance: none; /* Oculta la apariencia nativa del select */
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+}
+
+/* #categoria-select:focus{
+    border-color: orange;
+} */
+
+#categoria-select option{
+    /* padding: 10px; */
+    color: black;
+}
+
+#categoria-select option:checked{
+    background-color: orange;
+    color: white;
+}
+  
+/* #search-input:focus {
+    border-color: #007bff; //borde al hacer foco (dar click)
+} */
 
 .movie-serie{
-    padding-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(49, 48, 48);
-}
-
-.movie-container,
-.serie-container{
-    width: 94%;
-    margin-bottom: 40px;
-    display: flex;  
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px 0px;
-}
-
-.title-movies,
-.title-series{
-    width: 94%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-}
-
-.title-movies h2,
-.title-series h2{
-    color: orangered;
-}
-
-.movie-card,
-.serie-card{
-    width: 30%;
-    height: 640px;
-    overflow: hidden;
-    border: solid 3px orange;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.movie-card img,
-.serie-card img{
-    height: 280px;
 }
 
 .modal{
@@ -111,7 +155,7 @@ header nav{
 .modal-content {
     width: 700px;
     max-width: 800px;
-    top: 160px;
+    top: 80px;
     margin: auto;
     position: relative;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
@@ -122,8 +166,8 @@ header nav{
 
 .close {
     position: absolute;
-    top: 150px;
-    right: 42px;
+    top: 130px;
+    right: 30x;
     font-size: 26px;
     font-weight: bold;
     cursor: pointer;
@@ -138,45 +182,101 @@ header nav{
     z-index: 1;
 }
 
-
-.dates{
-    height: 180px;
-    display: flex;
-    flex-direction: column;
+.movie-container,
+.serie-container{
+    margin-bottom: 40px;
+    display: flex;  
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
+}
+
+#serie-container{
+    margin-top: -40px;
+    padding-top: 40px;
+}
+
+#serie-container-series{
+    margin-top: 114px;
+}
+
+#movie-container{
+    margin-top: 114px;
+}
+
+.title-movies,
+.title-series{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-movies h2,
+.title-series h2{
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: orange;
+}
+
+.movie-card,
+.serie-card{
+    width: 26%;
+    height: 560px;
+    overflow: hidden;
+    border: solid 3px rgba(255, 166, 0, 0.6);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 0 10px black;
+}
+
+.movie-card img,
+.serie-card img{
+    height: 280px;
 }
 
 .titulo {
-    font-size: 24px;
-    color: orangered;
+    font-size: 28px;
+    color: orange;
 }
 
 .info {
-    height: 150px;
-    padding: 0 30px;
+    height: 134px;
+    padding: 0 20px;
     line-height: 23px;
-    font-size: 17px;
+    font-size: 16px;
     text-align:justify;
     display: flex;
     align-items: center;
+    color: rgba(245, 245, 245, 0.9);
 }
 
 .btn1,
 .btn2{
-    padding: 10px 30px;
+    padding: 8px 30px;
+    font-size: 14px;
     border-radius: 4px;
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.8);
+    color: rgba(245, 245, 245, 0.9);
     border: none;
     cursor: pointer;
 }
 
+.btn1:hover,
+.btn2:hover{
+    background-color:lightblue;
+}
 
 footer{
-    height: 62px;
+    height: 80px;
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     color: orange;
     display: flex;
     align-items: center;
@@ -190,31 +290,6 @@ footer{
 
 @media screen and (max-width: 480px){
 
-    header {
-        height: 120px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    
-    header nav{
-        width: 100%;
-    }
-    
-    #menu{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    
-    .title-container h2{
-        font-size: 20px;
-    }
-    
-    .movie-card,
-    .serie-card{
-        width: 48%;
-        height: 500px;
-    }
     
     .movie-card img,
     .serie-card img{
@@ -236,29 +311,6 @@ footer{
         height: 200px;
         width: 400px;
     }
-    
-    .dates{
-        height: 220px;
-        gap: 6px;
-    }
-    
-    .titulo {
-        padding: 10px;
-        font-size: 20px;
-    }
-    
-    .info {
-        height: 150px;
-        padding: 0 16px;
-        line-height: 16px;
-        font-size: 12px;
-    }
-    
-    .btn{
-        padding: 4px 10px;
-        font-size: 12px;
-    }
-    
     
     footer{
         height: 50px;

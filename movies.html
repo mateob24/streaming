@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f93453ce33.js" crossorigin="anonymous"></script>
     <title>Devflix</title>
 </head>
-
 <body>
     <header>
         <div class="logo">
@@ -17,13 +15,19 @@
         </div>
         <nav>
             <ul id="menu">
-                <li><a id="all" class="location" href="/">Inicio</a></li>
-                <li><a id="movies" href="/movies.html">Películas</a></li>
+                <li><a id="all" href="/index.html">Inicio</a></li>
+                <li><a id="movies" class="location" href="/movies.html">Películas</a></li>
                 <li><a id="series" href="/series.html">Series</a></li>
             </ul>
+            <select id="categoria-select">
+                <option value="todas">Todas</option>
+                <option value="accion">Acción</option>
+                <option value="terror">Terror</option>
+            </select>
             <input type="text" id="search-input" placeholder="Buscar por título">
         </nav>
     </header>
+
     <section class="movie-serie">
         <div id="videoModal" class="modal">
             <div class="modal-content">
@@ -33,9 +37,9 @@
         </div>
 
         <section class="movie-container" id="movie-container" data-type="movie">
-            <div class="title-movies">
+            <!-- <div class="title-movies">
                 <h2>PELÍCULAS</h2>
-            </div>
+            </div> -->
             <div class="movie-card" data-category="accion">
                 <h2 class="titulo">John Wick 1</h2>
                 <img src="img/Jhon Wick 1.jpg" class="img" alt="Jhon Wick 1" />
@@ -72,7 +76,7 @@
             </div>
 
             <div class="movie-card" data-category="accion">
-                <h2 class="titulo">John Wick 4</h2>
+                    <h2 class="titulo">John Wick 4</h2>
                 <img src="img/Jhon Wick 4.jpg" class="img" alt="Jhon Wick 4" />
                 <p class="info">
                     El marqués Vincent de Gramont pretende matar a John Wick para
@@ -207,182 +211,8 @@
                 <button type="button" class="btn1">Ver trailer</button>
             </div>
         </section>
-
-        <!-- ///////////////////////////////////// SERIES ///////////////////////////////////////// -->
-
-        <section class="serie-container" id="serie-container" data-type="serie">
-            <div class="title-series">
-                <h2>SERIES</h2>
-            </div>
-            <div class="serie-card" data-category="accion">
-                <h2 class="titulo">Invasión Secreta</h2>
-                <img src="img/invasionSecreta.jpg" class="img" alt="Invasión secreta">
-                <p class="info">
-                    Cuando Nick Fury se entera de una invasión secreta de la Tierra por parte de una facción de
-                    Skrulls
-                    metamorfos, se une a sus aliados y juntos emprenden una carrera contrarreloj para frustrar una
-                    inminente invasión Skrull y salvar a la humanidad.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="accion">
-                <h2 class="titulo">La Lista Terminal</h2>
-                <img src="img/laListaTerminal.jpg" class="img" alt="La lista terminal">
-                <p class="info">
-                    James Reece regresa a casa después de que todo su pelotón de Navy SEAL es emboscado, solo para
-                    descubrir que nuevas fuerzas oscuras trabajan en su contra y ponen en peligro a sus seres
-                    queridos.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="accion">
-                <h2 class="titulo">Frontier</h2>
-                <img src="img/frontier.jpg" class="img" alt="Frontier">
-                <p class="info">
-                    Las facciones guerreras compiten por el control del comercio de pieles en el 1700 en un juego
-                    despiadado de riqueza y poder.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="accion">
-                <h2 class="titulo">Santo</h2>
-                <img src="img/santo.jpg" class="img" alt="Santo">
-                <p class="info">
-                    Dos policías deben aprender a trabajar en equipo para atrapar al narcotraficante más buscado del
-                    mundo, cuyo rostro es todo un misterio.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="accion">
-                <h2 class="titulo">Leverage</h2>
-                <img src="img/leverage.jpg" class="img" alt="Leverage">
-                <p class="info">
-                    El ex investigador de seguros, Nate Ford y su banda de secuaces actúan al estilo de Robin Hoods
-                    modernos, ellos se ingenian fraudes elaborados que tienen como blanco a las personas avaras y a
-                    la
-                    gente corrupta.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="drama">
-                <h2 class="titulo">Banshee</h2>
-                <img src="img/banshee.jpg" class="img" alt="Banshee">
-                <p class="info">
-                    Después de pasar 15 años en la cárcel por robarle a un mafioso ucraniano,
-                    Lucas Hood es puesto en libertad; decide buscar a su antigua amante y
-                    compañera haciéndose pasar por el 'sheriff' de Banshee, un pequeño pueblo que oculta más de lo que
-                    parece.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="drama">
-                <h2 class="titulo">Blindspot</h2>
-                <img src="img/blindspot.jpg" class="img" alt="Blindspot">
-                <p class="info">
-                    Cuando una hermosa mujer sin ningún recuerdo aparece desnuda en Times Square, el agente del FBI
-                    Kurt
-                    Weller y su equipo descubren que los tatuajes de su cuerpo guardan relación con crímenes que
-                    deberán
-                    resolver.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="belico">
-                <h2 class="titulo">Band of Brothers</h2>
-                <img src="img/bandOfBrothers.jpg" class="img" alt="Band of Brothers">
-                <p class="info">
-                    Se relatan las experiencias de los jóvenes de la Compañía Easy del 506° Regimiento de Infantería
-                    Paracaidista de la 101.ª División Aerotransportada del Ejército de los Estados Unidos.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="drama">
-                <h2 class="titulo">Marco Polo</h2>
-                <img src="img/marcoPolo.jpg" class="img" alt="Marco Polo">
-                <p class="info">
-                    El joven Marco Polo se embarca, en compañía de su padre y de su tío, en un viaje épico hasta la
-                    corte del Kublai Khan, en lo que hoy en día es Beijing. Una aventura en la que descubrirá
-                    tierras y
-                    gentes hasta entonces desconocidas.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="ciencia ficcion">
-                <h2 class="titulo">El caballero Negro</h2>
-                <img src="img/elCaballeroNegro.jpg" class="img" alt="El caballero negro">
-                <p class="info">
-                    En un futuro distópico en el que el mundo quedó devastado por la contaminación atmosférica, la
-                    supervivencia de la humanidad depende de un extraordinario grupo de repartidores: los Caballeros
-                    Negros.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="drama">
-                <h2 class="titulo">Espía/Maestro</h2>
-                <img src="img/espiaMaestro.jpg" class="img" alt="Espía/Maestro">
-                <p class="info">
-                    Durante la Guerra Fría la mano derecha del dictador rumano es también agente en cubierto de la
-                    KGB. Con una única oportunidad a seguir con vida, utilizará un viaje
-                    diplomático a Alemania como plataforma para ir a Estados Unidos.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="drama">
-                <h2 class="titulo">Bienvenidos a Edén</h2>
-                <img src="img/eden.jpg" class="img" alt="Bienvenidos a Edén">
-                <p class="info">
-                    Un grupo de jóvenes van a una fiesta en una isla paradisíaca, pero terminan viviendo un infierno
-                    lleno de secretos, peligros y trampas.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="drama">
-                <h2 class="titulo">Sweet Tooth</h2>
-                <img src="img/sweet.jpg" class="img" alt="Sweet Tooth">
-                <p class="info">
-                    En un mundo postapocalíptico, Gus, un niño mitad humano y mitad ciervo, busca un nuevo comienzo
-                    junto a Jeppers, un vagabundo con una vida solitaria.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="accion">
-                <h2 class="titulo">Jack Ryan</h2>
-                <img src="img/ryan.jpg" class="img" alt="Jack Ryan">
-                <p class="info">
-                    El analista de la CIA Jack Ryan se ve involucrado en una tarea peligrosa. El agente logra
-                    interceptar una comunicación entre terroristas y se ve obligado a entrar en un mundo despiadado.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-
-            <div class="serie-card" data-category="ciencia ficcion">
-                <h2 class="titulo">Moon Knight</h2>
-                <img src="img/moon.jpg" class="img" alt="Moon Knight">
-                <p class="info">
-                    Un trabajador de un museo que lucha contra un trastorno de identidad disociativo, recibe los
-                    poderes de un dios egipcio de la luna. Pronto descubre que estos poderes pueden ser tanto una
-                    bendición como una maldición.
-                </p>
-                <button type="button" class="btn2">Ver trailer</button>
-            </div>
-        </section>
     </section>
-
     <footer>&copy; Todos los derechos reservados</footer>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js"></script>    
 </body>
-
 </html>

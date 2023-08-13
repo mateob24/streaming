@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f93453ce33.js" crossorigin="anonymous"></script>
     <title>Devflix</title>
 </head>
-
 <body>
     <header>
         <div class="logo">
@@ -17,13 +15,21 @@
         </div>
         <nav>
             <ul id="menu">
-                <li><a id="all" class="location" href="/">Inicio</a></li>
+                <li><a id="all" href="/index.html">Inicio</a></li>
                 <li><a id="movies" href="/movies.html">Películas</a></li>
-                <li><a id="series" href="/series.html">Series</a></li>
+                <li><a id="series" class="location" href="/series.html">Series</a></li>
             </ul>
+            <select id="categoria-select">
+                <option value="todas">Todas</option>
+                <option value="accion">Acción</option>
+                <option value="drama">Drama</option>
+                <option value="belico">Bélico</option>
+                <option value="ciencia ficcion">Ciencia Ficción</option>
+            </select>
             <input type="text" id="search-input" placeholder="Buscar por título">
         </nav>
     </header>
+
     <section class="movie-serie">
         <div id="videoModal" class="modal">
             <div class="modal-content">
@@ -32,188 +38,10 @@
             </div>
         </div>
 
-        <section class="movie-container" id="movie-container" data-type="movie">
-            <div class="title-movies">
-                <h2>PELÍCULAS</h2>
-            </div>
-            <div class="movie-card" data-category="accion">
-                <h2 class="titulo">John Wick 1</h2>
-                <img src="img/Jhon Wick 1.jpg" class="img" alt="Jhon Wick 1" />
-                <p class="info">
-                    La ciudad de New York se llena de balas cuando Jhon Wick, un
-                    exasesino a sueldo, regresa de su retiro para enfrentar a los
-                    mafiosos rusos, liderados por Viggo Tarasov, que destruyeron todo
-                    aquello que el amaba y pusieron precio a su cabeza.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="accion">
-                <h2 class="titulo">John Wick 2</h2>
-                <img src="img/Jhon Wick 2.jpg" class="img" alt="Jhon Wick 2" />
-                <p class="info">
-                    El legendario sicario Jhon Wick abandona su retiro cuando, debido
-                    a un pacto de sangre que le vincula a un colega, se ve obligado a
-                    viajar a Roma para enfrentarse a los asesinos más pegrilosos del
-                    mundo y aniquilar a una oranización secreta.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="accion">
-                <h2 class="titulo">John Wick 3</h2>
-                <img src="img/Jhon Wick 3.jpg" class="img" alt="Jhon Wick 3" />
-                <p class="info">
-                    El legendario sicario John Wick es perseguido por las calles de
-                    Nueva York. Lo buscan unos mercenarios por una recompensa de 14
-                    millones de dólares por su cabeza y por romper con una regla.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="accion">
-                <h2 class="titulo">John Wick 4</h2>
-                <img src="img/Jhon Wick 4.jpg" class="img" alt="Jhon Wick 4" />
-                <p class="info">
-                    El marqués Vincent de Gramont pretende matar a John Wick para
-                    afianzar su poder en la Orden Suprema. Sin embargo, John tratará
-                    de adelantarse a cada uno de sus movimientos hasta lograr
-                    enfrentarse cara a cara con su peor enemigo.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="accion">
-                <h2 class="titulo">Lucy</h2>
-                <img src="img/lucy.jpg" class="img" alt="Lucy" />
-                <p class="info">
-                    Lucy, una joven que ejerce de "mula" para unos narcotraficantes,
-                    adquiere poderes sobrenaturales tras romperse una de las bolsas de
-                    droga que transporta y absorber los estupefacientes.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="accion">
-                <h2 class="titulo">Sin Limites</h2>
-                <img src="img/limitless.jpg" class="img" alt="Sin Limites" />
-                <p class="info">
-                    El escritor Eddie Morra se enfrenta al desempleo, al rechazo de su
-                    novia y está convencido de que no tiene futuro. La situación
-                    cambia cuando un amigo le presenta la MDT, una droga que mejora
-                    las habilidades mentales.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween</h2>
-                <img src="img/halloween.jpg" class="img" alt="Halloween" />
-                <p class="info">
-                    Un maniático regresa a su ciudad natal para continuar con la plaga
-                    de terror que inició hace quince años.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween 2</h2>
-                <img src="img/halloween2.jpg" class="img" alt="Halloween 2" />
-                <p class="info">
-                    El asesino Michael Myers sigue a un blanco herido hasta el
-                    hospital el 31 de octubre en Haddonfield, Illinois.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween 3</h2>
-                <img src="img/halloween3.jpg" class="img" alt="Halloween 3" />
-                <p class="info">
-                    Dos personas descubren que un comercial de televisión será la
-                    señal para que un psicópata haga explotar unas máscaras de
-                    Halloween.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween 4</h2>
-                <img src="img/halloween4.jpg" class="img" alt="Halloween 4" />
-                <p class="info">
-                    Para continuar con sus asesinatos de diez años atrás, Michael
-                    Myers vuelve a aterrorizar la ciudad de Haddonfield.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween 5</h2>
-                <img src="img/halloween5.jpg" class="img" alt="Halloween 5" />
-                <p class="info">
-                    Tras permanecer en coma durante un año, Michael Myers despierta y
-                    emprende un camino de regreso a Illinois decidido a matar a Jamie,
-                    su sobrina, quien ha sido encerrada en una institución mental tras
-                    el último intento de Michael de asesinarla.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween 6</h2>
-                <img src="img/halloween6.jpg" class="img" alt="Halloween 6" />
-                <p class="info">
-                    En Haddonfield, la noche de Halloween no es una fiesta cualquiera
-                    porque durante esta celebración, el psicópata Michael Myers
-                    regresa a su pueblo natal con un único objetivo: cometer una
-                    masacre.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween 7</h2>
-                <img src="img/halloween7.jpg" class="img" alt="Halloween 7" />
-                <p class="info">
-                    Dos décadas después de la masacre de 1978, Laurie Strode, ahora
-                    decana de la escuela privada de Carolina del Norte y madre
-                    soltera, tomará medidas extremas para proteger a su hijo después
-                    de enterarse de la fuga de prisión de Michael Myers, su hermano.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween 8</h2>
-                <img src="img/halloween8.jpg" class="img" alt="Halloween 8" />
-                <p class="info">
-                    Un grupo de adolescentes gana un concurso para pasar una noche en
-                    la casa donde creció Michael Myers, el cual será emitido en
-                    directo por Internet. Ellos esperan vivir una fiesta y obtener
-                    publicidad gratuita, pero las cosas acaban muy mal.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-
-            <div class="movie-card" data-category="terror">
-                <h2 class="titulo">Halloween El Final</h2>
-                <img src="img/halloweenElFinal.jpg" class="img" alt="Halloween elfinal" />
-                <p class="info">
-                    Cuatro años después de la desaparición de Michael Myers, el joven
-                    Corey lo encuentra maltrecho en las alcantarillas. Poco a poco, se
-                    establece un extraño vínculo entre estos dos personajes unidos por
-                    la venganza y la locura.
-                </p>
-                <button type="button" class="btn1">Ver trailer</button>
-            </div>
-        </section>
-
-        <!-- ///////////////////////////////////// SERIES ///////////////////////////////////////// -->
-
-        <section class="serie-container" id="serie-container" data-type="serie">
-            <div class="title-series">
+        <section class="serie-container" id="serie-container-series" data-type="serie">
+            <!-- <div class="title-series">
                 <h2>SERIES</h2>
-            </div>
+            </div> -->
             <div class="serie-card" data-category="accion">
                 <h2 class="titulo">Invasión Secreta</h2>
                 <img src="img/invasionSecreta.jpg" class="img" alt="Invasión secreta">
@@ -379,10 +207,10 @@
                 <button type="button" class="btn2">Ver trailer</button>
             </div>
         </section>
+    
     </section>
 
     <footer>&copy; Todos los derechos reservados</footer>
     <script type="module" src="app.js"></script>
 </body>
-
 </html>
