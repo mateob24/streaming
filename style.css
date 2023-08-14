@@ -8,6 +8,7 @@
 
 body{
     background-color: rgba(0, 0, 0, 0.8);
+    min-height: 100vh;
 }
 
 header {
@@ -20,7 +21,7 @@ header {
     position: fixed;
 }
 
-.logo{
+header .logo{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,97 +46,99 @@ header {
 
 
 header nav{
-    width: 50%;
+    height: 100%;
+    width: 58%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 100px; */
 }
 
-#menu{
-    width: 40%;
+header nav #menu{
+    width: 52%;
     display: flex;
     align-items: center;    
-    gap: 40px;
+    justify-content: center;
+    gap: 60px;
 }
 
 #menu li{
     list-style: none;
+    color: rgba(245, 245, 245, 0.6);
+    -webkit-text-stroke: 1px whitesmoke;
 }
 
 #menu li a{
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
-    color: rgba(245, 245, 245, 0.6);
-    -webkit-text-stroke: 1px whitesmoke;
     letter-spacing: 1px;
-    text-shadow: 0px 0px 1px;
-}
-
-.location{
-    color: rgba(255, 166, 0, 0.8);
 }
 
 #menu li a:hover{
-    color: rgba(255, 166, 0, 0.8);
-    -webkit-text-stroke: 1px orange;
+    color: #A9CCE3;
+    -webkit-text-stroke: 1px #5499C7;
     text-shadow: 0px 0px 1px;
     transition: 1s;
 }
 
-#search-input{
-    padding: 4px 10px;
-    border: 1px solid #ccc;
+#menu li #all, #movies, #series{
+    color: #7FB3D5;
+}
+
+.search-container{
+    width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container #search-input{
+    width: 100%;
+    padding: 6px 10px;
     font-size: 14px;
-    border-radius: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 30px;
     outline: none; 
-    color: black;
+    border: 1px solid #5499C7;
+    background-color: #7FB3D5;
+    color: rgba(245, 245, 245, 0.8);
+}
+
+.search-container i{
+    position: absolute;
+    right: 0;
+    color: rgba(245, 245, 245, 0.9);
 }
 
 #search-input::placeholder{
     font-size: 14px;
+    color: rgba(245, 245, 245, 0.9);
+    font-weight: 600;
 }
 
-/* #search-input:focus{
-    border-color: orange;  
-    FOCUS PARA MODIFICAR EL BUSCADOR MIENTRAS SE LE HAGA CLICK 
-} 
-*/
-    
 #categoria-select{
-    width: 150px;
-    padding: 4px 10px;
-    border: 1px solid #ccc;
+    width: 162px;
+    padding: 4px 4px;
     border-radius: 2px;
     font-size: 14px;
-    text-align: center;
-    appearance: none; /* Oculta la apariencia nativa del select */
+    font-weight: 600;
+    letter-spacing: 1px;
     outline: none;
-    background-color: white;
     cursor: pointer;
-    color: black;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.6);
 }
-
-/* #categoria-select:focus{
-    border-color: orange;
-} */
 
 #categoria-select option{
-    /* padding: 10px; */
-    color: black;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
 }
-
-#categoria-select option:checked{
-    background-color: orange;
-    color: white;
-}
-  
-/* #search-input:focus {
-    border-color: #007bff; //borde al hacer foco (dar click)
-} */
 
 .movie-serie{
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,16 +152,15 @@ header nav{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
     width: 700px;
     max-width: 800px;
-    top: 80px;
+    top: 60px;
     margin: auto;
     position: relative;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,11 +169,12 @@ header nav{
 .close {
     position: absolute;
     top: 130px;
-    right: 30x;
-    font-size: 26px;
+    right: 30px;
+    font-size: 32px;
     font-weight: bold;
     cursor: pointer;
     z-index: 2;
+    color: orange;
 }
 
 #trailer{
@@ -180,6 +183,15 @@ header nav{
     height: 400px;
     width: 700px;
     z-index: 1;
+    border: 3px solid rgba(255, 166, 0, 0.8);
+}
+
+#msg-no-result{
+    position: absolute;
+    display: none;
+    font-size: 32px;
+    color:#fff;
+    text-align:center;
 }
 
 .movie-container,
@@ -189,11 +201,11 @@ header nav{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 30px 50px;
 }
 
 #serie-container{
-    margin-top: -40px;
+    margin-top: -80px;
     padding-top: 40px;
 }
 
@@ -216,9 +228,11 @@ header nav{
 
 .title-movies h2,
 .title-series h2{
-    font-size: 32px;
+    font-size: 36px;
+    color: #7FB3D5;
+    -webkit-text-stroke: 1px #5499C7;
     letter-spacing: 1px;
-    color: orange;
+    /* #7FB3D5 #5499C7 */
 }
 
 .movie-card,
@@ -242,8 +256,10 @@ header nav{
 }
 
 .titulo {
-    font-size: 28px;
-    color: orange;
+    font-size: 30px;
+    color: rgba(255, 166, 0, 0.8);
+    -webkit-text-stroke: 1px orange;
+    letter-spacing: 1px;
 }
 
 .info {
@@ -254,15 +270,17 @@ header nav{
     text-align:justify;
     display: flex;
     align-items: center;
-    color: rgba(245, 245, 245, 0.9);
+    color: rgba(245, 245, 245, 0.8);
 }
 
 .btn1,
 .btn2{
-    padding: 8px 30px;
+    padding: 6px 26px;
     font-size: 14px;
+    font-weight: 600;
     border-radius: 4px;
     background-color: rgba(255, 166, 0, 0.8);
+    border: 1px solid orange;
     color: rgba(245, 245, 245, 0.9);
     border: none;
     cursor: pointer;
@@ -274,13 +292,15 @@ header nav{
 }
 
 footer{
-    height: 80px;
+    height: 10vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    color: orange;
+    color: #7FB3D5;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 
@@ -289,31 +309,122 @@ footer{
 /* ////////////////////////////////////// MEDIA QUERY //////////////////////////////////// */
 
 @media screen and (max-width: 480px){
-
+    header {
+        height: 142px;
+        justify-content: center;
+        flex-direction: column;
+    }
     
-    .movie-card img,
-    .serie-card img{
-        height: 200px;
+    .logo i{
+        margin-top: 5px;
+        font-size: 36px;
+    }
+    
+    .logo h1 {
+        font-size: 38px;
+    }
+    
+    
+    header nav{
+        width: 100%;
+        justify-content:space-around;
+        flex-direction: column;
+    }
+    
+    header nav #menu{
+        width: 70%;
+    }
+    
+    #menu li a{
+        font-size: 17px;
+    }
+    
+    .search-container #search-input{
+        padding: 3px 10px;
+        font-size: 13px;
+    }
+    
+    .search-container i{
+        position: absolute;
+        right: 0;
+    }
+    
+    #search-input::placeholder{
+        font-size: 13px;
+    }
+    
+    #categoria-select{
+        padding: 1px 4px;
+        font-size: 13px;  
+        order: 3;
     }
     
     .modal-content {
-        width: 400px;
+        width: 440px;
         max-width: 500px;
+        top: 70px;
     }
     
     .close {
-        top: 224px;
-        right: 16px;
+        top: 126px;
+        right: 20px;
     }
     
     #trailer{
-        top: 220px;
-        height: 200px;
-        width: 400px;
+        top: 120px;
+        height: 280px;
+        width: 440px;
     }
     
+    #msg-no-result{
+        font-size: 22px;
+        display: none;
+    }
+
+    .movie-container,
+    .serie-container{
+        margin-bottom: 40px;
+        gap: 30px 50px;
+    }
+
+    #serie-container{
+        margin-top: -80px;
+        padding-top: 40px;
+    }
+
+    #serie-container-series{
+        margin-top: 114px;
+    }
+
+    #movie-container{
+        margin-top: 114px;
+    }
+
+    .title-movies,
+    .title-series{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-movies h2,
+    .title-series h2{
+        font-size: 36px;
+        color: #7FB3D5;
+        -webkit-text-stroke: 1px #5499C7;
+        letter-spacing: 1px;
+        /* #7FB3D5 #5499C7 */
+    }
+
+    
+
+
+
+
     footer{
-        height: 50px;
-        font-size: 14px;
+        height: 10vh;
+        font-size: 13px;
     }
 }

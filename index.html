@@ -17,11 +17,14 @@
         </div>
         <nav>
             <ul id="menu">
-                <li><a id="all" class="location" href="/">Inicio</a></li>
-                <li><a id="movies" href="/movies.html">Películas</a></li>
-                <li><a id="series" href="/series.html">Series</a></li>
+                <li><a id="all" href="/">Inicio</a></li>
+                <li><a href="/movies.html">Películas</a></li>
+                <li><a href="/series.html">Series</a></li>
             </ul>
-            <input type="text" id="search-input" placeholder="Buscar por título">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar por título">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
         </nav>
     </header>
     <section class="movie-serie">
@@ -31,6 +34,8 @@
                 <iframe id="trailer" frameborder="0" allowfullscreen muted></iframe>
             </div>
         </div>
+
+        <p id="msg-no-result">No se encuentran resultados con esta búsqueda.</p>
 
         <section class="movie-container" id="movie-container" data-type="movie">
             <div class="title-movies">
@@ -274,9 +279,7 @@
                 <img src="img/banshee.jpg" class="img" alt="Banshee">
                 <p class="info">
                     Después de pasar 15 años en la cárcel por robarle a un mafioso ucraniano,
-                    Lucas Hood es puesto en libertad; decide buscar a su antigua amante y
-                    compañera haciéndose pasar por el 'sheriff' de Banshee, un pequeño pueblo que oculta más de lo que
-                    parece.
+                    Lucas Hood es puesto en libertad y decide buscar a su antigua amante y compañera haciéndose pasar por el 'sheriff' de Banshee, un pequeño pueblo.
                 </p>
                 <button type="button" class="btn2">Ver trailer</button>
             </div>

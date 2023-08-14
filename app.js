@@ -42,6 +42,7 @@ const movieCards = document.querySelectorAll(".movie-card");
 const serieCards = document.querySelectorAll('.serie-card')
 const movieTitle = document.querySelector(".title-movies");
 const serieTitle = document.querySelector(".title-series");
+const msgNoResult = document.getElementById("msg-no-result")
 
 searchInput.addEventListener("input", function() {
     const searchTerm = searchInput.value.toLowerCase();
@@ -66,6 +67,13 @@ searchInput.addEventListener("input", function() {
           hasSerieResults = true;
       } else {
           card.style.display = "none";
+      }
+
+      //Fragmento de código para mostrar mensaje cuando el buscador no encuentre un resultado
+      if (!hasMovieResults && !hasSerieResults) {
+        msgNoResult.style.display = "flex"
+      }else {
+        msgNoResult.style.display = "none"
       }
   }); 
 
