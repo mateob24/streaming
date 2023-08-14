@@ -38,6 +38,7 @@ const stopVideo = () => {
 
 //Filtrado a través de una búsqueda del titulo de la película
 const searchInput = document.getElementById("search-input");
+const serieContainer = document.getElementById("serie-container")
 const movieCards = document.querySelectorAll(".movie-card");
 const serieCards = document.querySelectorAll('.serie-card')
 const movieTitle = document.querySelector(".title-movies");
@@ -58,6 +59,13 @@ searchInput.addEventListener("input", function() {
         } else {
             card.style.display = "none";
         }
+
+      //Fragmento de código para mostrar mensaje cuando el buscador no encuentre un resultado
+      if (!hasMovieResults && !hasSerieResults) {
+        msgNoResult.style.display = "flex"
+      }else {
+        msgNoResult.style.display = "none"
+      }
     });
 
     serieCards.forEach(card => {
@@ -81,6 +89,12 @@ searchInput.addEventListener("input", function() {
   //o películas en caso de que la búsqueda no arroje alguna de estas dos
   movieTitle.style.display = hasMovieResults ? "flex" : "none";
   serieTitle.style.display = hasSerieResults ? "flex" : "none";
+
+  if (hasSerieResults && !hasMovieResults) {
+    serieContainer.style.marginTop = "-90px"; // Cambia este valor según tus necesidades
+} else {
+    serieContainer.style.marginTop = "-20px"; // Restablecer el margen si no se cumple la condición
+}
 });
 
 

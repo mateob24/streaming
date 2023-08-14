@@ -107,8 +107,9 @@ header nav #menu{
 }
 
 .search-container i{
-    position: absolute;
+    padding-right: 10px;
     right: 0;
+    position: absolute;
     color: rgba(245, 245, 245, 0.9);
 }
 
@@ -119,9 +120,9 @@ header nav #menu{
 }
 
 #categoria-select{
-    width: 162px;
+    width: 166px;
     padding: 4px 4px;
-    border-radius: 2px;
+    border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -138,7 +139,7 @@ header nav #menu{
 }
 
 .movie-serie{
-    min-height: 90vh;
+    min-height: 92vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,8 +169,8 @@ header nav #menu{
 
 .close {
     position: absolute;
-    top: 130px;
-    right: 30px;
+    top: 120px;
+    right: 18px;
     font-size: 32px;
     font-weight: bold;
     cursor: pointer;
@@ -187,11 +188,11 @@ header nav #menu{
 }
 
 #msg-no-result{
-    position: absolute;
-    display: none;
     font-size: 32px;
+    position: absolute;
     color:#fff;
     text-align:center;
+    display: none;
 }
 
 .movie-container,
@@ -201,20 +202,27 @@ header nav #menu{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px 50px;
+    gap: 34px 68px;
 }
 
 #serie-container{
-    margin-top: -80px;
-    padding-top: 40px;
-}
-
-#serie-container-series{
-    margin-top: 114px;
+    margin-bottom: 80px;
+    margin-top: -20px;
 }
 
 #movie-container{
-    margin-top: 114px;
+    padding-top: 134px;
+    margin-bottom: 90px;
+}
+
+#serie-container-series{
+    margin-top: 170px;
+    margin-bottom: 90px;
+}
+
+#movie-container-movies{
+    margin-top: 170px;
+    margin-bottom: 90px;
 }
 
 .title-movies,
@@ -228,7 +236,7 @@ header nav #menu{
 
 .title-movies h2,
 .title-series h2{
-    font-size: 36px;
+    font-size: 30px;
     color: #7FB3D5;
     -webkit-text-stroke: 1px #5499C7;
     letter-spacing: 1px;
@@ -237,7 +245,7 @@ header nav #menu{
 
 .movie-card,
 .serie-card{
-    width: 26%;
+    width: 490px;
     height: 560px;
     overflow: hidden;
     border: solid 3px rgba(255, 166, 0, 0.6);
@@ -288,11 +296,11 @@ header nav #menu{
 
 .btn1:hover,
 .btn2:hover{
-    background-color:lightblue;
+    background-color:#7FB3D5;
 }
 
 footer{
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: #7FB3D5;
@@ -302,9 +310,6 @@ footer{
     font-weight: 600;
     letter-spacing: 1px;
 }
-
-
-
 
 /* ////////////////////////////////////// MEDIA QUERY //////////////////////////////////// */
 
@@ -379,47 +384,66 @@ footer{
     #msg-no-result{
         font-size: 22px;
         display: none;
-    }
+    }   
 
     .movie-container,
     .serie-container{
         margin-bottom: 40px;
-        gap: 30px 50px;
-    }
-
-    #serie-container{
-        margin-top: -80px;
-        padding-top: 40px;
+        gap: 20px 16px;
     }
 
     #serie-container-series{
-        margin-top: 114px;
+        margin-top: 220px;
+        margin-bottom: 80px;
     }
 
-    #movie-container{
-        margin-top: 114px;
+    #serie-container{
+        margin-bottom: 40px;
     }
 
-    .title-movies,
-    .title-series{
-        width: 100%;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    #movie-container-movies{
+        margin-top: 220px;
+        margin-bottom: 80px;
+    }
+
+    #title-movies{
+        margin-top: 40px;
     }
 
     .title-movies h2,
     .title-series h2{
-        font-size: 36px;
-        color: #7FB3D5;
-        -webkit-text-stroke: 1px #5499C7;
-        letter-spacing: 1px;
-        /* #7FB3D5 #5499C7 */
+        font-size: 30px;
     }
 
-    
+    .movie-card,
+    .serie-card{
+        width: 220px;
+        height: 480px;
+        border: solid 2px rgba(255, 166, 0, 0.6);
+        gap: 12px;
+    }
 
+    .movie-card img,
+    .serie-card img{
+        height: 200px;
+    }
+
+    .titulo {
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .info {
+        height: 160px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    .btn1,
+    .btn2{
+        padding: 4px 16px;
+        font-size: 11px;
+    }
 
 
 
