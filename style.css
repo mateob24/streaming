@@ -202,7 +202,7 @@ header nav #menu{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 34px 68px;
+    gap: 24px 40px;
 }
 
 #serie-container{
@@ -245,7 +245,7 @@ header nav #menu{
 
 .movie-card,
 .serie-card{
-    width: 490px;
+    width: 420px;
     height: 560px;
     overflow: hidden;
     border: solid 3px rgba(255, 166, 0, 0.6);
@@ -314,6 +314,144 @@ footer{
 /* ////////////////////////////////////// MEDIA QUERY //////////////////////////////////// */
 
 @media screen and (max-width: 480px){
+    header {
+        height: 142px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .logo i{
+        margin-top: 5px;
+        font-size: 36px;
+    }
+    
+    .logo h1 {
+        font-size: 38px;
+    }
+    
+    
+    header nav{
+        width: 100%;
+        justify-content:space-around;
+        flex-direction: column;
+    }
+    
+    header nav #menu{
+        width: 70%;
+    }
+    
+    #menu li a{
+        font-size: 17px;
+    }
+    
+    .search-container #search-input{
+        padding: 3px 10px;
+        font-size: 13px;
+    }
+    
+    .search-container i{
+        position: absolute;
+        right: 0;
+    }
+    
+    #search-input::placeholder{
+        font-size: 13px;
+    }
+    
+    #categoria-select{
+        padding: 1px 4px;
+        font-size: 13px;  
+        order: 3;
+    }
+    
+    .modal-content {
+        width: 380px;
+        max-width: 400px;
+        top: 70px;
+    }
+    
+    .close {
+        top: 126px;
+        right: 40px;
+    }
+    
+    #trailer{
+        top: 20px;
+        height: 200px;
+        width: 340px;
+    }
+    
+    #msg-no-result{
+        font-size: 22px;
+        display: none;
+    }   
+
+    .movie-container,
+    .serie-container{
+        margin-bottom: 40px;
+        gap: 20px 16px;
+    }
+
+    #serie-container-series{
+        margin-top: 220px;
+        margin-bottom: 80px;
+    }
+
+    #serie-container{
+        margin-bottom: 40px;
+    }
+
+    #movie-container-movies{
+        margin-top: 220px;
+        margin-bottom: 80px;
+    }
+
+    #title-movies{
+        margin-top: 40px;
+    }
+
+    .title-movies h2,
+    .title-series h2{
+        font-size: 30px;
+    }
+
+    .movie-card,
+    .serie-card{
+        width: 220px;
+        height: 480px;
+        border: solid 2px rgba(255, 166, 0, 0.6);
+        gap: 12px;
+    }
+
+    .movie-card img,
+    .serie-card img{
+        height: 200px;
+    }
+
+    .titulo {
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .info {
+        height: 160px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    .btn1,
+    .btn2{
+        padding: 4px 16px;
+        font-size: 11px;
+    }
+
+    footer{
+        height: 10vh;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 600px){
     header {
         height: 142px;
         justify-content: center;
@@ -445,10 +583,9 @@ footer{
         font-size: 11px;
     }
 
-
-
     footer{
-        height: 10vh;
+        height: 8vh;
         font-size: 13px;
     }
 }
+

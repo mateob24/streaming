@@ -112,8 +112,15 @@ function filtrarPorCategoria(categoria) {
         card.style.display = 'none';
       }
     });
+
+    if (!hasMovieResults && !hasSerieResults) {
+      msgNoResult.style.display = "flex"
+    }else {
+      msgNoResult.style.display = "none"
+    }
   
   }
+  
 
   document.getElementById('categoria-select').addEventListener('change', function() {
     const seleccionada = this.value;
