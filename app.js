@@ -122,7 +122,7 @@ function filtrarPorCategoria(categoria) {
   }
   
 
-  document.getElementById('categoria-select').addEventListener('change', function() {
+  document.getElementById('categoria-select').addEventListener("change", function() {
     const seleccionada = this.value;
     filtrarPorCategoria(seleccionada);
   });

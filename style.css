@@ -169,13 +169,13 @@ header nav #menu{
 
 .close {
     position: absolute;
-    top: 120px;
-    right: 18px;
+    top: 114px;
+    right: 8px;
     font-size: 32px;
     font-weight: bold;
     cursor: pointer;
     z-index: 2;
-    color: orange;
+    color: #5499C7;
 }
 
 #trailer{
@@ -184,7 +184,7 @@ header nav #menu{
     height: 400px;
     width: 700px;
     z-index: 1;
-    border: 3px solid rgba(255, 166, 0, 0.8);
+    border: 3px solid #5499c7c4;
 }
 
 #msg-no-result{
@@ -311,9 +311,13 @@ footer{
     letter-spacing: 1px;
 }
 
-/* ////////////////////////////////////// MEDIA QUERY //////////////////////////////////// */
 
+/* ////////////////////////////////////// MEDIA QUERIES //////////////////////////////////// */
+
+
+/* MOBILE */
 @media screen and (max-width: 480px){
+
     header {
         height: 142px;
         justify-content: center;
@@ -371,20 +375,21 @@ footer{
     }
     
     .close {
-        top: 126px;
-        right: 40px;
+        top: 140px;
+        right: 10px;
     }
     
     #trailer{
-        top: 20px;
-        height: 200px;
-        width: 340px;
+        top: 140px;
+        height: 220px;
+        width: 380px;
     }
     
     #msg-no-result{
         font-size: 22px;
         display: none;
-    }   
+    }
+       
 
     .movie-container,
     .serie-container{
@@ -451,7 +456,9 @@ footer{
     }
 }
 
-@media screen and (max-width: 600px){
+
+
+@media screen and (min-width: 481px) and (max-width: 600px){
     header {
         height: 142px;
         justify-content: center;
@@ -588,4 +595,6 @@ footer{
         font-size: 13px;
     }
 }
+
+
 
